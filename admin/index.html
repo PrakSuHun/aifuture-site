@@ -4,24 +4,164 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>한국AI미래연구회 — 관리자</title>
+<title>한국AI미래연구회 — 관리자 로그인</title>
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/css/font-awesome.css">
 <style>
-  body { font-family: 'Pretendard', sans-serif; }
-  /* CMS 자체 스타일 위에 한글 폰트만 강제 */
-  *:not(i):not(.fa) { font-family: 'Pretendard', system-ui, sans-serif !important; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:'Pretendard',sans-serif;
+    background:linear-gradient(135deg,#0a1729 0%,#0f1f36 100%);
+    color:#e6edf7;min-height:100vh;
+    display:flex;align-items:center;justify-content:center;
+    padding:24px;line-height:1.55;
+  }
+  .card{
+    background:#142944;
+    border:1px solid #1f3a5f;
+    border-radius:14px;
+    max-width:480px;width:100%;
+    padding:42px 38px;
+    box-shadow:0 16px 48px rgba(0,0,0,.4);
+  }
+  .badge{
+    display:inline-block;
+    font-size:11px;letter-spacing:.3em;color:#4dd4e8;
+    font-weight:700;margin-bottom:14px;
+  }
+  h1{font-size:22px;font-weight:700;margin-bottom:8px;color:#fff}
+  .sub{color:#aeb9cc;font-size:14px;margin-bottom:30px}
+  label{display:block;font-size:12px;letter-spacing:.2em;color:#7f8da6;margin-bottom:8px;font-weight:600}
+  input[type=password],input[type=text]{
+    width:100%;padding:12px 14px;
+    background:#0a1729;color:#e6edf7;
+    border:1px solid #2a4566;border-radius:7px;
+    font-family:inherit;font-size:14px;
+    margin-bottom:6px;
+  }
+  input:focus{outline:0;border-color:#4dd4e8}
+  .hint{color:#7f8da6;font-size:12px;margin-bottom:22px;line-height:1.6}
+  .hint a{color:#4dd4e8;text-decoration:none}
+  .hint a:hover{text-decoration:underline}
+  button{
+    width:100%;padding:13px;border:0;
+    background:#4dd4e8;color:#062032;
+    border-radius:7px;font-weight:700;
+    font-family:inherit;font-size:14px;cursor:pointer;
+    transition:.15s;
+  }
+  button:hover:not(:disabled){background:#7ee0f0}
+  button:disabled{opacity:.5;cursor:wait}
+  .err{
+    color:#f88c8c;background:rgba(248,140,140,.08);
+    border:1px solid rgba(248,140,140,.3);
+    padding:10px 14px;border-radius:7px;
+    font-size:13px;margin-top:14px;
+    display:none;
+  }
+  .ok{
+    color:#7eea9e;background:rgba(126,234,158,.08);
+    border:1px solid rgba(126,234,158,.3);
+    padding:10px 14px;border-radius:7px;
+    font-size:13px;margin-top:14px;
+    display:none;
+  }
+  .extra{
+    margin-top:30px;padding-top:24px;
+    border-top:1px solid #1f3a5f;
+    text-align:center;font-size:12px;color:#7f8da6;
+  }
+  .extra a{color:#aeb9cc;text-decoration:none;margin:0 8px}
+  .extra a:hover{color:#4dd4e8}
 </style>
 </head>
 <body>
-<!--
-  Sveltia CMS — Decap CMS와 100% 호환되는 모던 포크.
-  GitHub OAuth(PKCE) 직접 지원 → 별도 인증 프록시 서버 불필요.
-  나중에 Decap으로 바꾸려면 아래 script src만 교체하면 됩니다.
--->
-<script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js" type="module"></script>
 
-<!-- Decap CMS로 전환 시 (위 줄 대신 이 줄 사용)
-<script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
--->
+<div class="card">
+  <div class="badge">ADMIN LOGIN</div>
+  <h1>한국AI미래연구회 관리자</h1>
+  <p class="sub">GitHub Personal Access Token으로 로그인하면, 사이트 화면에서 직접 편집 모드를 사용할 수 있습니다.</p>
+
+  <form id="loginForm">
+    <label for="pat">GitHub Personal Access Token</label>
+    <input type="password" id="pat" autocomplete="off" placeholder="ghp_xxxxxxxxxxxxxxxx" required>
+    <p class="hint">
+      토큰이 없으면 <a href="https://github.com/settings/tokens/new?scopes=repo&description=AI%EB%AF%B8%EB%9E%98%EC%97%B0%EA%B5%AC%ED%9A%8C+CMS" target="_blank">여기서 발급</a> (scope: <code>repo</code>만 체크)
+    </p>
+    <button type="submit" id="btn">로그인하고 편집 시작</button>
+  </form>
+
+  <div id="err" class="err"></div>
+  <div id="ok" class="ok"></div>
+
+  <div class="extra">
+    <a href="sveltia.html">Sveltia CMS 모드</a>
+    <span style="color:#3a4a60">·</span>
+    <a href="../">사이트 보기</a>
+  </div>
+</div>
+
+<script>
+const REPO = 'PrakSuHun/aifuture-site';
+const $ = id => document.getElementById(id);
+
+// 이미 로그인되어 있으면 곧바로 편집 모드로
+if (localStorage.getItem('github_pat')) {
+  // PAT 검증 후 자동 진입
+  validateAndGo(localStorage.getItem('github_pat'), true);
+}
+
+$('loginForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const pat = $('pat').value.trim();
+  if (!pat) return;
+  await validateAndGo(pat, false);
+});
+
+async function validateAndGo(pat, silent) {
+  $('btn').disabled = true;
+  $('btn').textContent = '검증 중...';
+  $('err').style.display = 'none';
+  $('ok').style.display = 'none';
+
+  try {
+    // 1. PAT 자체 유효성 (GET /user)
+    const userRes = await fetch('https://api.github.com/user', {
+      headers: { Authorization: 'Bearer ' + pat }
+    });
+    if (!userRes.ok) throw new Error('토큰이 유효하지 않습니다 (GitHub 응답: ' + userRes.status + ')');
+    const user = await userRes.json();
+
+    // 2. 저장소 접근 권한 확인
+    const repoRes = await fetch('https://api.github.com/repos/' + REPO, {
+      headers: { Authorization: 'Bearer ' + pat }
+    });
+    if (!repoRes.ok) throw new Error('저장소 접근 불가 — 토큰의 repo 권한을 확인하세요');
+    const repo = await repoRes.json();
+    if (!repo.permissions || !repo.permissions.push) {
+      throw new Error('이 토큰은 ' + REPO + ' 저장소에 쓰기 권한이 없습니다');
+    }
+
+    // 성공: 저장하고 이동
+    localStorage.setItem('github_pat', pat);
+    localStorage.setItem('github_user', user.login);
+    $('ok').textContent = '로그인 성공 (' + user.login + ') — 편집 화면으로 이동합니다...';
+    $('ok').style.display = 'block';
+    setTimeout(() => { location.href = '../?edit=1'; }, 600);
+  } catch (e) {
+    if (silent) {
+      // 자동 검증 실패 시 PAT 삭제
+      localStorage.removeItem('github_pat');
+      $('btn').disabled = false;
+      $('btn').textContent = '로그인하고 편집 시작';
+      return;
+    }
+    $('err').textContent = '⚠ ' + e.message;
+    $('err').style.display = 'block';
+    $('btn').disabled = false;
+    $('btn').textContent = '다시 시도';
+  }
+}
+</script>
 </body>
 </html>

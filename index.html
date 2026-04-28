@@ -41,6 +41,26 @@
 		window.__contentReady = fetch('content.json?_=' + Date.now())
 			.then(function(r){ return r.ok ? r.json() : {}; })
 			.catch(function(){ return {}; });
+
+		// 편집 모드 (?edit=1) — 관리자 오버레이 동적 로드
+		(function(){
+			if (new URLSearchParams(location.search).get('edit') !== '1') return;
+			if (!localStorage.getItem('github_pat')) {
+				// PAT 없으면 로그인 페이지로
+				location.replace('admin/');
+				return;
+			}
+			document.documentElement.classList.add('edit-mode');
+			var l = document.createElement('link');
+			l.rel = 'stylesheet';
+			l.href = 'admin/edit.css?_=' + Date.now();
+			document.head.appendChild(l);
+			window.addEventListener('DOMContentLoaded', function(){
+				var s = document.createElement('script');
+				s.src = 'admin/edit.js?_=' + Date.now();
+				document.body.appendChild(s);
+			});
+		})();
 	</script>
 	<script defer>
 		// DOM이 준비되면 content.json 값을 data-edit-* 요소에 적용
