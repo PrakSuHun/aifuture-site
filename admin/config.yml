@@ -6,7 +6,7 @@
 # GitHub 백엔드 (Sveltia CMS 사용 시 OAuth 프록시 불필요)
 backend:
   name: github
-  repo: USER/REPO            # ⚠️ 본인 GitHub 사용자명/저장소명으로 변경 (예: leejaewoong/aifuture-site)
+  repo: PrakSuHun/aifuture-site
   branch: main               # 또는 master / 사용 중인 기본 브랜치명
   # commit_messages 는 선택 사항 — 커밋 메시지 형식 커스터마이징
   commit_messages:
