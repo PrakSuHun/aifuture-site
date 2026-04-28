@@ -1,0 +1,160 @@
+{
+  "nav": {
+    "logo": "assets/images/logo.png",
+    "home": "Home",
+    "about": "About",
+    "scope": "Scope",
+    "curriculum": "Curriculum",
+    "speakers": "Speakers",
+    "contact": "Contact"
+  },
+  "hero": {
+    "bg": "assets/upload/singlepage-bg.jpg"
+  },
+  "slide1": {
+    "h1pre": "Welcome to",
+    "h1em": "한국AI미래연구회",
+    "h6pre": "AI 시대, 생존을 넘어",
+    "h6em": "공존으로",
+    "text": "미래 인재가 갖춰야 할 핵심 역량과 AI 공존 전략",
+    "cta": "자세히 보기"
+  },
+  "slide2": {
+    "h1pre": "AI와 인간이 공존하는",
+    "h1em": "미래",
+    "text": "우리는 그 길을 설계합니다"
+  },
+  "slide3": {
+    "h1pre": "학계 · 산업계 · R&D 현장의",
+    "h1em": "실무 전문가",
+    "text": "현장에 뿌리내린 연구와 실천"
+  },
+  "about": {
+    "title": "About Us · 우리는 누구인가"
+  },
+  "service1": {
+    "title": "현장 전문가",
+    "text": "AI 개발자 · 공학박사 · 교육 전문가로 구성된 전문가 모임으로, 인공지능의 급격한 발전이 만들어내는 산업·교육·노동의 구조적 변화를 분석합니다."
+  },
+  "service2": {
+    "title": "활동 영역",
+    "text": "대학 · 공공기관 · 기업 대상 특강과 AI 인재·교육 관련 연구 보고서 발간, 씽크탱크 활동, 산학협력 네트워킹을 폭넓게 진행합니다."
+  },
+  "service3": {
+    "title": "철학",
+    "text": "기술 중심이 아닌, 사람 중심의 AI 공존 모델을 지향합니다. 단순한 기술 사용자를 넘어 AI를 활용한 문제 해결자로 성장하도록 지원합니다."
+  },
+  "whoweare": {
+    "title": "Who we are",
+    "img": "assets/upload/about.jpg",
+    "lead": "한국AI미래연구회",
+    "text": "는 인공지능의 급격한 발전이 만들어내는 산업·교육·노동의 구조적 변화를 분석하고, 미래 세대가 AI와 공존하며 자신만의 가치를 발휘할 수 있도록 지원하는 전문가 모임입니다. 단순한 '기술 사용자'를 넘어, AI를 활용한 문제 해결자(Problem Solver)로 학생들이 성장할 수 있도록 지원합니다. AI는 더 이상 먼 미래의 기술이 아닙니다. 현장의 구조는 빠르게 변화하고 있으며, 지금 이 순간에도 학생들의 진로와 직업 환경이 빠르게 재편되고 있습니다."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "label1": "핵심 역량 정의·확산", "pct1": "100%",
+    "label2": "산업 ↔ 교육 가교 역할", "pct2": "100%",
+    "label3": "사람 중심 AI 공존 모델", "pct3": "100%",
+    "label4": "비판적 사고 · 메타인지", "pct4": "95%",
+    "label5": "협업 · AI 리터러시", "pct5": "95%"
+  },
+  "coremsg": {
+    "title": "Core Message",
+    "lead": "AI가 당신의 일자리를 뺏지는 않습니다.",
+    "text": "하지만, AI를 사용하는 사람이 당신의 자리를 대신할 것입니다. 'AI에 대체될까'라는 두려움에서 'AI를 어떻게 활용할 것인가'라는 능동적 진로·학습 전략으로의 관점이동이 필요합니다. AI 시대를 살아갈 미래 인재의 핵심 역량을 정의하고, 학생·교육 현장에 확산하는 것이 우리의 사명입니다. 산업 현장의 실제 활용 노하우를 교육 현장에 전달하는 가교(Bridge)로서 기능하며, 기술이 아닌 사람을 중심에 둔 AI 공존 모델을 제시합니다."
+  },
+  "scope": { "title": "Scope · 활동 영역과 구성원" },
+  "blog1": {
+    "img": "assets/upload/blog1.jpg",
+    "title": "AI 시대 인재상 · 교육 패러다임 연구",
+    "text": "AI 시대를 살아갈 미래 인재가 갖춰야 할 4대 핵심 역량 — 비판적 사고, 메타인지, 협업, AI 리터러시 — 를 정의하고 교육 현장에 확산합니다.",
+    "tag1": "연구분야", "tag2": "Research"
+  },
+  "blog2": {
+    "img": "assets/upload/blog2.jpg",
+    "title": "산업 현장의 AI 워크플로우 사례 분석",
+    "text": "현직 AI 개발자와 함께 산업 현장에서 실제로 사용되는 AI 도구와 자동화 시스템, 활용 사례를 분석하여 학습 로드맵으로 정리합니다.",
+    "tag1": "연구분야", "tag2": "Research"
+  },
+  "blog3": {
+    "img": "assets/upload/blog3.jpg",
+    "title": "R&D 현장의 AI 활용 연구",
+    "text": "소재 분야를 비롯한 R&D 현장에서의 AI 도입·활용 사례를 분석하고, AI가 가능한 영역과 인간만의 가치 영역의 경계를 연구합니다.",
+    "tag1": "연구분야", "tag2": "Research"
+  },
+  "blog4": {
+    "img": "assets/upload/blog4.jpg",
+    "title": "대학 · 공공기관 · 기업 대상 특강",
+    "text": "대학 재학생부터 공공기관 종사자, 기업 임직원까지 폭넓은 대상을 위한 맞춤형 특강을 진행합니다. 오프라인 · 온라인 · 하이브리드 모두 가능합니다.",
+    "tag1": "주요활동", "tag2": "Lecture"
+  },
+  "blog5": {
+    "img": "assets/upload/blog5.jpg",
+    "title": "AI 인재 · 교육 관련 연구 보고서 발간",
+    "text": "현장에 뿌리내린 연구를 바탕으로 AI 시대 인재상과 교육 패러다임에 관한 연구 보고서를 발간하여 사회적 공감대를 형성합니다.",
+    "tag1": "주요활동", "tag2": "Report"
+  },
+  "blog6": {
+    "img": "assets/upload/blog6.jpg",
+    "title": "산학협력 네트워킹 · 후속 프로그램",
+    "text": "특강 이후 워크숍 · 캠프 · 멘토링 등 후속 프로그램을 통해 학생과 산업·연구 현장을 잇는 산학협력 네트워크를 확장합니다.",
+    "tag1": "주요활동", "tag2": "Network"
+  },
+  "curriculum": { "title": "Curriculum · 특강 세부 구성" },
+  "filter": {
+    "all": "전체 보기", "why": "WHY · 이론", "how": "HOW · 실전",
+    "what": "WHAT · 현장", "overview": "개요"
+  },
+  "p1": { "img": "assets/upload/image1.jpg", "title": "총 60분 · 3개 트랙", "sub": "이론 → 실전 → 현장 흐름으로 구성" },
+  "p2": { "img": "assets/upload/image2.jpg", "title": "참여 인원 30명", "sub": "대학 재학생 (전공 무관)" },
+  "p3": { "img": "assets/upload/image3.jpg", "title": "오프라인 강연 중심", "sub": "온라인 · 하이브리드 협의 가능" },
+  "p4": { "img": "assets/upload/image4.jpg", "title": "WHY · 이론 (10분)", "sub": "AI 시대의 교육과 패러다임" },
+  "p5": { "img": "assets/upload/image5.jpg", "title": "4대 핵심 역량", "sub": "비판적 사고 · 메타인지 · 협업 · AI 리터러시" },
+  "p6": { "img": "assets/upload/image6.jpg", "title": "HOW · 실전 (20분)", "sub": "현직 개발자가 알려주는 실전 AI 활용 기술" },
+  "p7": { "img": "assets/upload/image7.jpg", "title": "나만의 자동화 시스템", "sub": "아이디어 발굴부터 결과물까지" },
+  "p8": { "img": "assets/upload/image1.jpg", "title": "WHAT · 현장 (30분)", "sub": "공학박사가 말하는 AI 시대 R&D 현실과 인재상" },
+  "p9": { "img": "assets/upload/image2.jpg", "title": "Q&A · 진로 멘토링", "sub": "현직자 · 연구자와의 직접 소통" },
+  "team": { "title": "Speakers · 강사진 소개" },
+  "team1": {
+    "img": "assets/upload/team1.jpg",
+    "name": "김영광",
+    "role": "메인 강사 · 공학박사 (소재 분야)"
+  },
+  "team2": {
+    "img": "assets/upload/team2.jpg",
+    "name": "이재웅",
+    "role": "대표 · 교육 패러다임 전문가"
+  },
+  "team3": {
+    "img": "assets/upload/team3.jpg",
+    "name": "김유일",
+    "role": "현직 AI 개발자 · 산업계"
+  },
+  "team4": {
+    "img": "assets/upload/team4.jpg",
+    "name": "한국AI미래연구회",
+    "role": "학계 · 산업계 · R&D 연합"
+  },
+  "main": {
+    "title": "메인 강사 · 김영광 — 공학박사 (소재 분야)",
+    "text": "포항공과대학교(POSTECH) 신소재공학과 박사 · 고려대 · 동국대 · 성균관대 · 순천대 · 동아대 등 다수 대학 교육 · 한국자동차연구원 · 한국재료연구원 등 공공기관 교육 · 현) (주)버추얼랩 이사 · 현) 대한금속재료학회 인공지능 분과 소속 · 상위 5% 이내 SCI 논문 다수 발표 · 정부 R&D 다수 참여"
+  },
+  "contact": {
+    "title": "Contact us · 기대효과 및 협력 문의",
+    "formTitle": "문의 메시지 보내기",
+    "phName": "기관·이름",
+    "phEmail": "이메일",
+    "phMessage": "문의 내용 (일정·장소·인원·예산 등)",
+    "submit": "메시지 보내기",
+    "infoTitle": "한국AI미래연구회 · 대표 이재웅",
+    "email": "swampu@naver.com",
+    "emailLink": "mailto:swampu@naver.com",
+    "phone": "010-9507-0702",
+    "location": "KOREA AI FUTURE RESEARCH SOCIETY"
+  },
+  "footer": {
+    "copyright": "© 2026 한국AI미래연구회 · KOREA AI FUTURE RESEARCH SOCIETY",
+    "emailLink": "mailto:swampu@naver.com",
+    "phoneLink": "tel:01095070702"
+  }
+}

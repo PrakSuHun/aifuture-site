@@ -1,0 +1,420 @@
+# =====================================================
+#  Sveltia CMS / Decap CMS 콘텐츠 스키마
+#  ── 한국AI미래연구회 사이트 콘텐츠 관리 설정
+# =====================================================
+
+# GitHub 백엔드 (Sveltia CMS 사용 시 OAuth 프록시 불필요)
+backend:
+  name: github
+  repo: USER/REPO            # ⚠️ 본인 GitHub 사용자명/저장소명으로 변경 (예: leejaewoong/aifuture-site)
+  branch: main               # 또는 master / 사용 중인 기본 브랜치명
+  # commit_messages 는 선택 사항 — 커밋 메시지 형식 커스터마이징
+  commit_messages:
+    create: '내용 추가: {{collection}} 「{{slug}}」'
+    update: '내용 수정: {{collection}} 「{{slug}}」'
+    delete: '내용 삭제: {{collection}} 「{{slug}}」'
+    uploadMedia: '이미지 업로드: {{path}}'
+    deleteMedia: '이미지 삭제: {{path}}'
+
+# 로컬 개발용 (npx @sveltia/cms-proxy-server 또는 npx decap-server 띄울 때)
+local_backend: true
+
+# 미디어(이미지) 저장 위치
+# 저장소 안의 한국AI미래연구회/uploads/ 폴더에 업로드됨
+media_folder: 'uploads'
+public_folder: '/uploads'
+
+# 미디어 라이브러리 옵션 — 큰 이미지는 자동 리사이즈
+media_library:
+  config:
+    multiple: false
+
+# CMS 표시 언어 (Sveltia 한국어 지원)
+locale: 'ko'
+
+# 콘텐츠 스키마
+collections:
+  - name: site
+    label: '사이트 콘텐츠'
+    label_singular: '콘텐츠'
+    description: '사이트 전체에 표시되는 텍스트와 이미지를 관리합니다. 저장하면 GitHub에 자동 커밋되고, Vercel이 사이트를 다시 빌드합니다 (보통 1~2분).'
+    files:
+      - name: content
+        label: '전체 콘텐츠 (content.json)'
+        file: '한국AI미래연구회/content.json'
+        format: 'json'
+        fields:
+          # ── 네비게이션 ──
+          - label: '🧭 네비게이션 / 로고'
+            name: nav
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '상단 로고 이미지', name: logo, widget: image, required: false }
+              - { label: '메뉴 — Home', name: home, widget: string }
+              - { label: '메뉴 — About', name: about, widget: string }
+              - { label: '메뉴 — Scope', name: scope, widget: string }
+              - { label: '메뉴 — Curriculum', name: curriculum, widget: string }
+              - { label: '메뉴 — Speakers', name: speakers, widget: string }
+              - { label: '메뉴 — Contact', name: contact, widget: string }
+
+          # ── 메인 슬라이드 ──
+          - label: '🎬 HOME 배경'
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '배경 이미지', name: bg, widget: image }
+
+          - label: '🎬 슬라이드 1'
+            name: slide1
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '제목 앞부분', name: h1pre, widget: string }
+              - { label: '제목 강조 부분', name: h1em, widget: string }
+              - { label: '부제 앞부분', name: h6pre, widget: string }
+              - { label: '부제 강조 부분', name: h6em, widget: string }
+              - { label: '본문', name: text, widget: string }
+              - { label: '버튼 텍스트', name: cta, widget: string }
+
+          - label: '🎬 슬라이드 2'
+            name: slide2
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '제목 앞부분', name: h1pre, widget: string }
+              - { label: '제목 강조 부분', name: h1em, widget: string }
+              - { label: '본문', name: text, widget: string }
+
+          - label: '🎬 슬라이드 3'
+            name: slide3
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '제목 앞부분', name: h1pre, widget: string }
+              - { label: '제목 강조 부분', name: h1em, widget: string }
+              - { label: '본문', name: text, widget: string }
+
+          # ── About 섹션 ──
+          - label: 'ℹ️ About — 섹션 제목'
+            name: about
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '섹션 제목', name: title, widget: string }
+
+          - label: 'ℹ️ About — 카드 1 (현장 전문가)'
+            name: service1
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '제목', name: title, widget: string }
+              - { label: '본문', name: text, widget: text }
+
+          - label: 'ℹ️ About — 카드 2 (활동 영역)'
+            name: service2
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '제목', name: title, widget: string }
+              - { label: '본문', name: text, widget: text }
+
+          - label: 'ℹ️ About — 카드 3 (철학)'
+            name: service3
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '제목', name: title, widget: string }
+              - { label: '본문', name: text, widget: text }
+
+          # ── Who we are / Mission / Core Message ──
+          - label: '👥 Who we are (좌측 칼럼)'
+            name: whoweare
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '제목', name: title, widget: string }
+              - { label: '이미지', name: img, widget: image }
+              - { label: '강조 단어 (앞부분)', name: lead, widget: string }
+              - { label: '본문 (강조 단어 뒤)', name: text, widget: text }
+
+          - label: '🎯 Our Mission (중앙 진행바)'
+            name: mission
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '제목', name: title, widget: string }
+              - { label: '항목 1 — 라벨', name: label1, widget: string }
+              - { label: '항목 1 — 퍼센트', name: pct1, widget: string }
+              - { label: '항목 2 — 라벨', name: label2, widget: string }
+              - { label: '항목 2 — 퍼센트', name: pct2, widget: string }
+              - { label: '항목 3 — 라벨', name: label3, widget: string }
+              - { label: '항목 3 — 퍼센트', name: pct3, widget: string }
+              - { label: '항목 4 — 라벨', name: label4, widget: string }
+              - { label: '항목 4 — 퍼센트', name: pct4, widget: string }
+              - { label: '항목 5 — 라벨', name: label5, widget: string }
+              - { label: '항목 5 — 퍼센트', name: pct5, widget: string }
+
+          - label: '💬 Core Message (우측 칼럼)'
+            name: coremsg
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '제목', name: title, widget: string }
+              - { label: '강조 문장', name: lead, widget: string }
+              - { label: '본문', name: text, widget: text }
+
+          # ── Scope / Blog cards 6 ──
+          - label: '📚 Scope — 섹션 제목'
+            name: scope
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '섹션 제목', name: title, widget: string }
+
+          - label: '📚 Scope — 카드 1'
+            name: blog1
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '이미지', name: img, widget: image }
+              - { label: '제목', name: title, widget: string }
+              - { label: '본문', name: text, widget: text }
+              - { label: '태그 1', name: tag1, widget: string }
+              - { label: '태그 2', name: tag2, widget: string }
+
+          - label: '📚 Scope — 카드 2'
+            name: blog2
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '이미지', name: img, widget: image }
+              - { label: '제목', name: title, widget: string }
+              - { label: '본문', name: text, widget: text }
+              - { label: '태그 1', name: tag1, widget: string }
+              - { label: '태그 2', name: tag2, widget: string }
+
+          - label: '📚 Scope — 카드 3'
+            name: blog3
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '이미지', name: img, widget: image }
+              - { label: '제목', name: title, widget: string }
+              - { label: '본문', name: text, widget: text }
+              - { label: '태그 1', name: tag1, widget: string }
+              - { label: '태그 2', name: tag2, widget: string }
+
+          - label: '📚 Scope — 카드 4'
+            name: blog4
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '이미지', name: img, widget: image }
+              - { label: '제목', name: title, widget: string }
+              - { label: '본문', name: text, widget: text }
+              - { label: '태그 1', name: tag1, widget: string }
+              - { label: '태그 2', name: tag2, widget: string }
+
+          - label: '📚 Scope — 카드 5'
+            name: blog5
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '이미지', name: img, widget: image }
+              - { label: '제목', name: title, widget: string }
+              - { label: '본문', name: text, widget: text }
+              - { label: '태그 1', name: tag1, widget: string }
+              - { label: '태그 2', name: tag2, widget: string }
+
+          - label: '📚 Scope — 카드 6'
+            name: blog6
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '이미지', name: img, widget: image }
+              - { label: '제목', name: title, widget: string }
+              - { label: '본문', name: text, widget: text }
+              - { label: '태그 1', name: tag1, widget: string }
+              - { label: '태그 2', name: tag2, widget: string }
+
+          # ── Curriculum / Portfolio ──
+          - label: '📋 Curriculum — 섹션 제목'
+            name: curriculum
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '섹션 제목', name: title, widget: string }
+
+          - label: '📋 Curriculum — 필터 라벨'
+            name: filter
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '전체', name: all, widget: string }
+              - { label: 'WHY', name: why, widget: string }
+              - { label: 'HOW', name: how, widget: string }
+              - { label: 'WHAT', name: what, widget: string }
+              - { label: '개요', name: overview, widget: string }
+
+          - label: '📋 Curriculum — 항목 1'
+            name: p1
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '이미지', name: img, widget: image }
+              - { label: '제목', name: title, widget: string }
+              - { label: '부제', name: sub, widget: string }
+
+          - label: '📋 Curriculum — 항목 2'
+            name: p2
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '이미지', name: img, widget: image }
+              - { label: '제목', name: title, widget: string }
+              - { label: '부제', name: sub, widget: string }
+
+          - label: '📋 Curriculum — 항목 3'
+            name: p3
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '이미지', name: img, widget: image }
+              - { label: '제목', name: title, widget: string }
+              - { label: '부제', name: sub, widget: string }
+
+          - label: '📋 Curriculum — 항목 4'
+            name: p4
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '이미지', name: img, widget: image }
+              - { label: '제목', name: title, widget: string }
+              - { label: '부제', name: sub, widget: string }
+
+          - label: '📋 Curriculum — 항목 5'
+            name: p5
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '이미지', name: img, widget: image }
+              - { label: '제목', name: title, widget: string }
+              - { label: '부제', name: sub, widget: string }
+
+          - label: '📋 Curriculum — 항목 6'
+            name: p6
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '이미지', name: img, widget: image }
+              - { label: '제목', name: title, widget: string }
+              - { label: '부제', name: sub, widget: string }
+
+          - label: '📋 Curriculum — 항목 7'
+            name: p7
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '이미지', name: img, widget: image }
+              - { label: '제목', name: title, widget: string }
+              - { label: '부제', name: sub, widget: string }
+
+          - label: '📋 Curriculum — 항목 8'
+            name: p8
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '이미지', name: img, widget: image }
+              - { label: '제목', name: title, widget: string }
+              - { label: '부제', name: sub, widget: string }
+
+          - label: '📋 Curriculum — 항목 9'
+            name: p9
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '이미지', name: img, widget: image }
+              - { label: '제목', name: title, widget: string }
+              - { label: '부제', name: sub, widget: string }
+
+          # ── Team / Speakers ──
+          - label: '🎤 Speakers — 섹션 제목'
+            name: team
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '섹션 제목', name: title, widget: string }
+
+          - label: '🎤 Speakers — 강사 1 (메인)'
+            name: team1
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '사진', name: img, widget: image }
+              - { label: '이름', name: name, widget: string }
+              - { label: '직함', name: role, widget: string }
+
+          - label: '🎤 Speakers — 강사 2'
+            name: team2
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '사진', name: img, widget: image }
+              - { label: '이름', name: name, widget: string }
+              - { label: '직함', name: role, widget: string }
+
+          - label: '🎤 Speakers — 강사 3'
+            name: team3
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '사진', name: img, widget: image }
+              - { label: '이름', name: name, widget: string }
+              - { label: '직함', name: role, widget: string }
+
+          - label: '🎤 Speakers — 강사 4'
+            name: team4
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '사진', name: img, widget: image }
+              - { label: '이름', name: name, widget: string }
+              - { label: '직함', name: role, widget: string }
+
+          - label: '🎤 Speakers — 메인 강사 상세'
+            name: main
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '제목', name: title, widget: string }
+              - { label: '경력 본문', name: text, widget: text }
+
+          # ── Contact ──
+          - label: '📞 Contact'
+            name: contact
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '섹션 제목', name: title, widget: string }
+              - { label: '문의 폼 제목', name: formTitle, widget: string }
+              - { label: '폼 — 이름 placeholder', name: phName, widget: string }
+              - { label: '폼 — 이메일 placeholder', name: phEmail, widget: string }
+              - { label: '폼 — 메시지 placeholder', name: phMessage, widget: string }
+              - { label: '제출 버튼', name: submit, widget: string }
+              - { label: '직접 연락처 — 제목', name: infoTitle, widget: string }
+              - { label: '이메일 (표시)', name: email, widget: string }
+              - { label: '이메일 링크 (mailto:)', name: emailLink, widget: string }
+              - { label: '전화번호', name: phone, widget: string }
+              - { label: '위치/소속', name: location, widget: string }
+
+          # ── Footer ──
+          - label: '🦶 Footer'
+            name: footer
+            widget: object
+            collapsed: true
+            fields:
+              - { label: '저작권 문구', name: copyright, widget: string }
+              - { label: '이메일 링크 (mailto:)', name: emailLink, widget: string }
+              - { label: '전화 링크 (tel:)', name: phoneLink, widget: string }
