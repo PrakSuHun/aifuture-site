@@ -136,8 +136,7 @@ collections:
             fields:
               - { label: '제목', name: title, widget: string }
               - { label: '이미지', name: img, widget: image }
-              - { label: '강조 단어 (앞부분)', name: lead, widget: string }
-              - { label: '본문 (강조 단어 뒤)', name: text, widget: text }
+              - { label: '본문 (전체, 강조 단어는 <span>...</span>로 감싸세요)', name: text, widget: text }
 
           - label: '🎯 Our Mission (중앙 진행바)'
             name: mission
@@ -145,16 +144,11 @@ collections:
             collapsed: true
             fields:
               - { label: '제목', name: title, widget: string }
-              - { label: '항목 1 — 라벨', name: label1, widget: string }
-              - { label: '항목 1 — 퍼센트', name: pct1, widget: string }
-              - { label: '항목 2 — 라벨', name: label2, widget: string }
-              - { label: '항목 2 — 퍼센트', name: pct2, widget: string }
-              - { label: '항목 3 — 라벨', name: label3, widget: string }
-              - { label: '항목 3 — 퍼센트', name: pct3, widget: string }
-              - { label: '항목 4 — 라벨', name: label4, widget: string }
-              - { label: '항목 4 — 퍼센트', name: pct4, widget: string }
-              - { label: '항목 5 — 라벨', name: label5, widget: string }
-              - { label: '항목 5 — 퍼센트', name: pct5, widget: string }
+              - { label: '항목 1 (라벨 <span>퍼센트</span>)', name: entry1, widget: string }
+              - { label: '항목 2 (라벨 <span>퍼센트</span>)', name: entry2, widget: string }
+              - { label: '항목 3 (라벨 <span>퍼센트</span>)', name: entry3, widget: string }
+              - { label: '항목 4 (라벨 <span>퍼센트</span>)', name: entry4, widget: string }
+              - { label: '항목 5 (라벨 <span>퍼센트</span>)', name: entry5, widget: string }
 
           - label: '💬 Core Message (우측 칼럼)'
             name: coremsg
@@ -162,8 +156,7 @@ collections:
             collapsed: true
             fields:
               - { label: '제목', name: title, widget: string }
-              - { label: '강조 문장', name: lead, widget: string }
-              - { label: '본문', name: text, widget: text }
+              - { label: '본문 (전체, 강조 문장은 <span>...</span>로 감싸세요)', name: text, widget: text }
 
           # ── Scope / Blog cards 6 ──
           - label: '📚 Scope — 섹션 제목'

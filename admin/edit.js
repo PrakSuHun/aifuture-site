@@ -24,9 +24,10 @@ const LABELS = {
 	'service1.title':'카드1 제목','service1.text':'카드1 본문',
 	'service2.title':'카드2 제목','service2.text':'카드2 본문',
 	'service3.title':'카드3 제목','service3.text':'카드3 본문',
-	'whoweare.title':'좌측 칼럼 제목','whoweare.img':'좌측 칼럼 이미지','whoweare.lead':'좌측 강조 단어','whoweare.text':'좌측 본문',
+	'whoweare.title':'좌측 칼럼 제목','whoweare.img':'좌측 칼럼 이미지','whoweare.text':'좌측 본문 전체 (강조 단어는 <span>으로 감쌈)',
 	'mission.title':'미션 제목',
-	'coremsg.title':'Core Message 제목','coremsg.lead':'Core Message 강조','coremsg.text':'Core Message 본문',
+	'mission.entry1':'미션1 (라벨 + 퍼센트)','mission.entry2':'미션2 (라벨 + 퍼센트)','mission.entry3':'미션3 (라벨 + 퍼센트)','mission.entry4':'미션4 (라벨 + 퍼센트)','mission.entry5':'미션5 (라벨 + 퍼센트)',
+	'coremsg.title':'Core Message 제목','coremsg.text':'Core Message 본문 (강조 문장은 <span>으로 감쌈)',
 	'scope.title':'Scope 섹션 제목',
 	'curriculum.title':'Curriculum 섹션 제목',
 	'team.title':'Speakers 섹션 제목',
@@ -36,10 +37,7 @@ const LABELS = {
 	'contact.infoTitle':'직접 연락처 제목','contact.email':'이메일 (표시)','contact.emailLink':'이메일 링크','contact.phone':'전화번호','contact.location':'위치/소속',
 	'footer.copyright':'저작권 문구','footer.emailLink':'푸터 이메일 링크','footer.phoneLink':'푸터 전화 링크',
 };
-for (let i=1;i<=5;i++){
-	LABELS['mission.label'+i]='미션'+i+' 라벨';
-	LABELS['mission.pct'+i]='미션'+i+' 퍼센트';
-}
+// (mission entries 위에서 직접 등록)
 for (let i=1;i<=6;i++){
 	LABELS['blog'+i+'.img']='Scope 카드'+i+' 이미지';
 	LABELS['blog'+i+'.title']='Scope 카드'+i+' 제목';
