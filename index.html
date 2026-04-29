@@ -32,23 +32,49 @@
 			margin: 0 0 18px 0;
 			border-radius: 4px;
 		}
-		/* email input 을 input[type=text] 와 1:1 동일하게 (orbit7 원본 #contact-form input[type=text] 사양 그대로 복제) */
-		#contact-form input[type="email"]{
+		/* contact-form input/textarea 통일 — 좌측 패딩 36px(아이콘 자리), 우측 14px, 동일 높이/border/font */
+		#contact-form input[type="text"],
+		#contact-form input[type="email"],
+		#contact-form textarea{
 			color: #737373;
 			font-size: 13px;
-			font-family: 'Open Sans', sans-serif;
+			font-family: 'Pretendard','Open Sans',sans-serif;
 			border: 1px solid #e6e6e6;
 			border-radius: 0;
 			outline: none;
 			width: 100%;
-			padding: 12px 32px;
+			padding: 12px 14px 12px 36px;
 			display: block;
 			margin-bottom: 10px;
 			background: #fff;
 			box-sizing: border-box;
+			line-height: 1.4;
+			height: auto;
 		}
-		#contact-form input[type="email"]:focus{
+		#contact-form input[type="email"]:focus,
+		#contact-form input[type="text"]:focus,
+		#contact-form textarea:focus{
 			border: 1px solid #0076f9;
+		}
+		#contact-form textarea{
+			height: 130px;
+			resize: vertical;
+		}
+		/* float-input 좌·우 박스가 정확히 좌우 대칭이 되도록 간격 조정 */
+		.float-input{ padding-right: 8px; }
+		.float-input2{ padding-left: 8px; padding-right: 0; }
+		/* 폼 아이콘 위치 — input 박스 내부 좌측 14px 위치에 맞도록
+		   (.float-input은 padding-right:8px이라 input 좌측 외곽 = 부모 좌측 → 아이콘 left:14px)
+		   (.float-input2는 padding-left:8px이라 input 좌측 외곽 = 부모 좌측+8px → 아이콘 left:22px) */
+		.float-input span{ top: 13px; left: 14px; z-index: 2; }
+		.float-input2 span{ top: 13px; left: 22px; z-index: 2; }
+		.textarea-input span{ top: 13px; left: 14px; z-index: 2; }
+		/* 송부 버튼 — 가독성 향상 */
+		#contact-form input[type="submit"]{
+			padding: 13px 32px;
+			font-size: 14px;
+			letter-spacing: .5px;
+			cursor: pointer;
 		}
 
 		/* ============================================== */
@@ -130,13 +156,14 @@
 			.staff-post-content h5{ font-size: 16px; }
 			.staff-post-content span{ font-size: 12px; }
 
-			/* Contact 폼 */
+			/* Contact 폼 — 모바일에서 input/textarea 동일 padding, submit 풀너비 */
 			#contact-form input[type="text"], #contact-form input[type="email"], #contact-form textarea{
-				font-size: 14px; padding: 11px 14px;
+				font-size: 14px; padding: 11px 14px 11px 36px;
 			}
-			#contact-form input[type="text"], #contact-form input[type="email"]{ padding-left: 36px; }
-			#contact-form textarea{ padding-left: 36px; height: 100px; }
-			#contact-form input[type="submit"]{ width: 100%; float: none; padding: 14px; font-size: 14px; }
+			#contact-form textarea{ height: 110px; }
+			#contact-form input[type="submit"]{ width: 100%; float: none; padding: 14px; font-size: 14px; letter-spacing: .5px; }
+			.float-input span, .float-input2 span{ top: 12px; left: 14px; }
+			.textarea-input span{ top: 12px; left: 14px; }
 
 			/* 직접 연락처 정보 */
 			.contact-information h3{ font-size: 17px; }
