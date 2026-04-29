@@ -33,10 +33,9 @@
 │   ├── index.html      ← 관리자 페이지 (Sveltia CMS)
 │   └── config.yml      ← 콘텐츠 스키마
 ├── uploads/            ← CMS가 업로드한 이미지 보관
+├── assets/             ← 사이트 디자인 자산 (CSS/JS/이미지) — 한국AI미래연구회 자체 보유
 ├── vercel.json         ← Vercel 캐싱/SEO 설정
 └── SETUP.md            ← 이 문서
-
-orbit7-HTML/            ← 템플릿 자산 (CSS/JS/이미지) — 같이 배포
 ```
 
 ## 🚀 1단계 — GitHub에 올리기
