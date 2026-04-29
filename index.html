@@ -29,12 +29,29 @@
 		h1, h3, h4, h5{ font-weight: 600 !important; }
 		.services-post-content h4{ color: #1a1a1a; font-weight: 700 !important; font-size: 18px; }
 		.services-post-content p{ color: #6e6e7a; }
-		.news-item h2{ color: #1a1a1a; font-weight: 700; font-size: 17px; line-height: 1.4; }
-		.news-item p{ color: #6e6e7a; }
-		.work-post-content h2{ color: #1a1a1a; font-weight: 700; font-size: 16px; }
-		.work-post-content span{ color: #6e6e7a; font-size: 13px; line-height: 1.5; }
-		.staff-post-content h5{ color: #1a1a1a; font-weight: 700; font-size: 16px; }
-		.staff-post-content span{ color: #6e6e7a; font-size: 13px; }
+		.news-item{ border: 1px solid #ececef; box-shadow: 0 2px 6px rgba(0,0,0,.04); background: #fff; padding: 0 0 16px; border-radius: 6px; overflow: hidden; }
+		.news-item img{ margin-bottom: 0 !important; }
+		.news-item h2{ color: #15151a !important; font-weight: 700 !important; font-size: 17px !important; line-height: 1.4 !important; padding: 16px 18px 6px; margin-bottom: 0 !important; }
+		.news-item p{ color: #5a5a66 !important; padding: 0 18px 4px; line-height: 1.65 !important; }
+		.work-post{ border: 1px solid #ececef; box-shadow: 0 2px 6px rgba(0,0,0,.04); background: #fff; }
+		.work-post-content{ padding: 16px 14px !important; }
+		.work-post-content h2{ color: #15151a !important; font-weight: 700 !important; font-size: 16px !important; line-height: 1.4 !important; margin-bottom: 6px !important; }
+		.work-post-content span{ color: #5a5a66 !important; font-size: 13px !important; line-height: 1.5 !important; }
+		/* Speakers 카드 — vendor의 검은 반투명 배경(#000 0.5) 위 텍스트가 검정 가독성 X
+		   → 흰 배경 + 테두리 카드 스타일로 재구성, 사진 opacity 0.7 → 1 */
+		.staff-post-gal img{ opacity: 1 !important; }
+		.staff-post-content{
+			background: #fff !important;
+			border: 1px solid #e8e8e8;
+			border-top: none;
+			padding: 16px 18px !important;
+		}
+		.staff-post-content h5{ color: #15151a !important; font-weight: 700; font-size: 16px; margin-bottom: 6px; line-height: 1.3 !important; }
+		.staff-post-content span{ color: #5a5a66 !important; font-size: 13px; font-weight: 400 !important; line-height: 1.5 !important; }
+		/* hover시 사라지는 효과 무력화 (단일 페이지에 호버 의존 X) */
+		.staff-post:hover .staff-post-content{ background: #fff !important; }
+		.staff-post:hover .staff-post-content h5,
+		.staff-post:hover .staff-post-content span{ opacity: 1 !important; }
 		.about-us-text p, .company-mission p{ color: #404049; }
 		.skills-progress p{ color: #404049; font-weight: 500; }
 		.contact-information-list li{ color: #404049; }
