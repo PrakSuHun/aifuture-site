@@ -32,7 +32,7 @@
 			margin: 0 0 18px 0;
 			border-radius: 4px;
 		}
-		/* orbit7 CSS 가 input[type=text] 만 스타일링하므로 email 도 동일하게 적용 */
+		/* email input 을 input[type=text] 와 1:1 동일하게 (orbit7 원본 #contact-form input[type=text] 사양 그대로 복제) */
 		#contact-form input[type="email"]{
 			color: #737373;
 			font-size: 13px;
@@ -41,13 +41,120 @@
 			border-radius: 0;
 			outline: none;
 			width: 100%;
-			padding: 14px 14px 14px 40px;
-			margin-bottom: 14px;
+			padding: 12px 32px;
+			display: block;
+			margin-bottom: 10px;
 			background: #fff;
 			box-sizing: border-box;
 		}
 		#contact-form input[type="email"]:focus{
-			border-color: #0076f9;
+			border: 1px solid #0076f9;
+		}
+
+		/* ============================================== */
+		/*  모바일 최적화 — 한국AI미래연구회                  */
+		/* ============================================== */
+
+		/* 태블릿 이하 (≤991px) */
+		@media (max-width: 991px){
+			/* 헤더 */
+			.navbar-brand img{ max-height: 40px; width: auto; }
+			.home-box{ height: auto; min-height: 380px; }
+			.home-box .background-view{
+				width: 100%; height: 100%; left: 0; margin-left: 0;
+				position: absolute; object-fit: cover;
+			}
+			.flexslider .slides h1{ font-size: 32px !important; line-height: 1.2 !important; }
+			.flexslider .slides h6{ font-size: 16px !important; }
+			.flexslider .slides p{ font-size: 13px !important; }
+
+			/* 섹션 패딩 축소 */
+			.section{ padding: 40px 0; }
+			#about-section, #blog-section, #portfolio-section, #team-section, #contact-section{
+				padding: 30px 0;
+			}
+
+			/* 카드 간격 */
+			.col-md-4, .col-md-6, .col-md-3, .col-md-12{ margin-bottom: 20px; }
+
+			/* 폼 — 50% width 두 개 input 을 한 줄씩 (모바일에서 가로로 너무 좁아지는 것 방지) */
+			.float-input, .float-input2{
+				width: 100% !important;
+				float: none !important;
+				padding-right: 0 !important;
+				padding-left: 0 !important;
+			}
+		}
+
+		/* 모바일 (≤767px) */
+		@media (max-width: 767px){
+			/* 헤더 더 컴팩트 */
+			.home-box{ min-height: 320px; }
+			.flexslider .slides h1{ font-size: 26px !important; }
+			.flexslider .slides h6{ font-size: 14px !important; }
+			.flexslider .slides p{ font-size: 12px !important; }
+
+			/* 섹션 제목 */
+			#about-section h3, #blog-section h3, #portfolio-section h3, #team-section h3, #contact-section h3{
+				font-size: 22px !important; text-align: center;
+			}
+
+			/* 서비스 카드 — 6각형 아이콘 크기 살짝 축소 */
+			.services-post > a{ width: 70px; height: 42px; }
+			.services-post > a:before{ border-left-width: 35px; border-right-width: 35px; border-bottom-width: 17px; top: -17px; }
+			.services-post > a:after{ border-left-width: 35px; border-right-width: 35px; border-top-width: 17px; bottom: -17px; }
+			.services-post > a i{ line-height: 42px; font-size: 22px; }
+			.services-post-content h4{ font-size: 17px; }
+			.services-post-content p{ font-size: 13px; line-height: 1.6; }
+
+			/* About 3컬럼 → 1컬럼 */
+			.about-box .col-md-4{ margin-bottom: 30px; }
+			.about-us-text .innner-box img{ max-height: 220px; object-fit: cover; }
+
+			/* Skills progress 시각 정돈 */
+			.skills-progress p{ font-size: 13px; }
+			.meter{ height: 16px; padding: 4px; }
+
+			/* Blog 카드 */
+			.news-item{ margin-bottom: 30px; }
+			.news-item h2 a, .news-item h2{ font-size: 16px; }
+			.news-item p{ font-size: 13px; }
+
+			/* Portfolio (curriculum) 카드 */
+			.work-post{ margin-bottom: 25px; }
+			.work-post-content h2{ font-size: 16px; }
+			.work-post-content span{ font-size: 12px; }
+
+			/* Speakers 카드 */
+			.staff-post{ margin-bottom: 30px; max-width: 280px; margin-left: auto; margin-right: auto; }
+			.staff-post-content h5{ font-size: 16px; }
+			.staff-post-content span{ font-size: 12px; }
+
+			/* Contact 폼 */
+			#contact-form input[type="text"], #contact-form input[type="email"], #contact-form textarea{
+				font-size: 14px; padding: 11px 14px;
+			}
+			#contact-form input[type="text"], #contact-form input[type="email"]{ padding-left: 36px; }
+			#contact-form textarea{ padding-left: 36px; height: 100px; }
+			#contact-form input[type="submit"]{ width: 100%; float: none; padding: 14px; font-size: 14px; }
+
+			/* 직접 연락처 정보 */
+			.contact-information h3{ font-size: 17px; }
+			.contact-information-list li{ font-size: 13px; word-break: break-all; }
+
+			/* Footer */
+			.footer-line{ padding: 15px 0; }
+			.footer-line p{ font-size: 12px; }
+		}
+
+		/* 작은 모바일 (≤480px) */
+		@media (max-width: 480px){
+			.flexslider .slides h1{ font-size: 22px !important; }
+			.home-box{ min-height: 280px; }
+			.section, #about-section, #blog-section, #portfolio-section, #team-section, #contact-section{
+				padding: 25px 0;
+			}
+			.container{ padding-left: 15px; padding-right: 15px; }
 		}
 	</style>
 
