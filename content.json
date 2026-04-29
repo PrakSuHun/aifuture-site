@@ -46,7 +46,7 @@
   },
   "whoweare": {
     "title": "Who we are",
-    "img": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop&q=80&auto=format",
+    "img": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=400&fit=crop&q=80&auto=format",
     "text": "한국AI미래연구회는 인공지능의 급격한 발전이 만들어내는 산업·교육·노동의 구조적 변화를 분석하고, 미래 세대가 AI와 공존하며 자신만의 가치를 발휘할 수 있도록 지원하는 전문가 모임입니다. 단순한 '기술 사용자'를 넘어, AI를 활용한 문제 해결자(Problem Solver)로 학생들이 성장할 수 있도록 지원합니다. AI는 더 이상 먼 미래의 기술이 아닙니다. 현장의 구조는 빠르게 변화하고 있으며, 지금 이 순간에도 학생들의 진로와 직업 환경이 빠르게 재편되고 있습니다."
   },
   "mission": {
@@ -86,7 +86,7 @@
     "tag2": "Research"
   },
   "blog4": {
-    "img": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop&q=80&auto=format",
+    "img": "https://images.unsplash.com/photo-1576267423048-15c0040fec78?w=600&h=400&fit=crop&q=80&auto=format",
     "title": "대학 · 공공기관 · 기업 대상 특강",
     "text": "대학 재학생부터 공공기관 종사자, 기업 임직원까지 폭넓은 대상을 위한 맞춤형 특강을 진행합니다. 오프라인 · 온라인 · 하이브리드 모두 가능합니다.",
     "tag1": "주요활동",
@@ -122,7 +122,7 @@
     "sub": "이론 → 실전 → 현장 흐름으로 구성"
   },
   "p2": {
-    "img": "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&h=450&fit=crop&q=80&auto=format",
+    "img": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600&h=450&fit=crop&q=80&auto=format",
     "title": "참여 인원 30명",
     "sub": "대학 재학생 (전공 무관)"
   },
@@ -157,7 +157,7 @@
     "sub": "공학박사가 말하는 AI 시대 R&D 현실과 인재상"
   },
   "p9": {
-    "img": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=450&fit=crop&q=80&auto=format",
+    "img": "https://images.unsplash.com/photo-1573497019418-b400bb3ab074?w=600&h=450&fit=crop&q=80&auto=format",
     "title": "Q&A · 진로 멘토링",
     "sub": "현직자 · 연구자와의 직접 소통"
   },
@@ -165,22 +165,22 @@
     "title": "Speakers · 강사진 소개"
   },
   "team1": {
-    "img": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=faces&q=80&auto=format",
+    "img": "https://images.unsplash.com/photo-1500336624523-d727130c3328?w=400&h=400&fit=crop&crop=faces&q=80&auto=format",
     "name": "김영광",
     "role": "메인 강사 · 공학박사 (소재 분야)"
   },
   "team2": {
-    "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=faces&q=80&auto=format",
+    "img": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=400&fit=crop&crop=faces&q=80&auto=format",
     "name": "이재웅",
     "role": "대표 · 교육 패러다임 전문가"
   },
   "team3": {
-    "img": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=faces&q=80&auto=format",
+    "img": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=400&fit=crop&crop=faces&q=80&auto=format",
     "name": "김유일",
     "role": "현직 AI 개발자 · 산업계"
   },
   "team4": {
-    "img": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=400&fit=crop&crop=faces&q=80&auto=format",
+    "img": "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&h=400&fit=crop&crop=faces&q=80&auto=format",
     "name": "한국AI미래연구회",
     "role": "학계 · 산업계 · R&D 연합"
   },
