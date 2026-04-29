@@ -96,11 +96,18 @@ html.edit-mode [data-edit-img][data-cms-dirty]{
 	box-shadow:0 0 0 3px rgba(240,179,51,.3);
 }
 
-/* 일부 인터랙티브 요소 비활성화 (편집 모드에서 클릭 시 페이지 이동 방지) */
-html.edit-mode a{
-	pointer-events:auto;
+/* 편집 모드에서 모든 a/form 요소가 클릭 가능 — submit/이동은 JS에서 막음 */
+html.edit-mode a{ pointer-events:auto; }
+html.edit-mode form{ opacity:.92 }
+html.edit-mode form input,
+html.edit-mode form textarea,
+html.edit-mode form button{ pointer-events:auto; }
+/* 폼 입력칸도 편집 가능 표시 */
+html.edit-mode input[data-edit-attr],
+html.edit-mode textarea[data-edit-attr]{
+	caret-color:transparent;
+	user-select:none;
 }
-html.edit-mode form{pointer-events:none;opacity:.85}
 
 /* 사이드 편집 패널 */
 .cms-panel{

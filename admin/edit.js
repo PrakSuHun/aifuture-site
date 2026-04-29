@@ -270,12 +270,36 @@ function updateSaveButton(){
 
 // ── 오버레이 부착 ────────────────────────────────────────────
 function attachOverlays(){
-	document.querySelectorAll('[data-edit-text],[data-edit-img],[data-edit-href],[data-edit-attr]').forEach(el=>{
-		// flexslider 등 인터랙티브 요소 안에 있는 텍스트도 클릭 가능하도록
-		el.addEventListener('click', ev=>{
+	const els = document.querySelectorAll('[data-edit-text],[data-edit-img],[data-edit-href],[data-edit-attr]');
+	console.log('[CMS] 편집 가능 요소 발견:', els.length + '개');
+
+	els.forEach(el=>{
+		// 핸들러 — flexslider/Bootstrap nav 등 다른 핸들러보다 우선
+		const handler = ev => {
 			if (!document.documentElement.classList.contains('edit-mode')) return;
 			ev.preventDefault(); ev.stopPropagation();
+			if (typeof ev.stopImmediatePropagation === 'function') ev.stopImmediatePropagation();
+			// input/textarea 클릭은 포커스 들어가지 않도록 즉시 blur
+			if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+				try { el.blur(); } catch(_){}
+			}
 			openEditor(el);
+		};
+		// click + mousedown 둘 다 capture 단계로 등록 — 다른 라이브러리가 mousedown 먼저 처리하는 경우 대비
+		el.addEventListener('click', handler, true);
+		el.addEventListener('mousedown', ev => {
+			if (!document.documentElement.classList.contains('edit-mode')) return;
+			ev.preventDefault();
+			ev.stopPropagation();
+			if (typeof ev.stopImmediatePropagation === 'function') ev.stopImmediatePropagation();
+		}, true);
+	});
+
+	// 모든 form 의 submit 차단 (편집 모드에서 실수로 보내지 않도록)
+	document.querySelectorAll('form').forEach(f => {
+		f.addEventListener('submit', ev => {
+			ev.preventDefault();
+			toast('편집 모드에서는 폼 전송이 비활성화됩니다', 'warn');
 		}, true);
 	});
 }
@@ -373,15 +397,23 @@ function escapeAttr(s){ return String(s||'').replace(/&/g,'&amp;').replace(/"/g,
 
 // ── 초기화 ────────────────────────────────────────────────────
 async function init(){
-	// content.json 캐시 (사이트가 이미 fetch함)
-	content = await window.__contentReady;
-	if (!content || typeof content !== 'object') content = {};
+	console.log('[CMS] 편집 모드 초기화 시작');
+	try {
+		content = await window.__contentReady;
+		if (!content || typeof content !== 'object') content = {};
+		console.log('[CMS] content.json 로드 완료, 최상위 키:', Object.keys(content).length);
 
-	buildToolbar();
-	buildPanel();
-	attachOverlays();
-	updateSaveButton();
-	toast('편집 모드 활성 — 텍스트나 이미지를 클릭하여 편집');
+		buildToolbar();
+		buildPanel();
+		attachOverlays();
+		updateSaveButton();
+		toast('편집 모드 — 텍스트/이미지 클릭하여 편집');
+		console.log('[CMS] 초기화 완료. window.__cms 로 디버그 가능');
+		window.__cms = { content, dirtyKeys, pendingImages, openEditor };
+	} catch (e) {
+		console.error('[CMS] 초기화 실패:', e);
+		alert('편집 모드 초기화 실패: ' + e.message);
+	}
 }
 
 // content가 DOM에 적용된 직후 실행되도록 약간 지연
