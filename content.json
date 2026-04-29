@@ -165,28 +165,24 @@
     "title": "Speakers · 강사진 소개"
   },
   "team1": {
-    "img": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%230076f9%22%20width%3D%22200%22%20height%3D%22200%22/%3E%3Ctext%20x%3D%22100%22%20y%3D%22130%22%20font-size%3D%22100%22%20text-anchor%3D%22middle%22%20fill%3D%22%23ffffff%22%20font-family%3D%22%27Pretendard%27%2C%27Noto%20Sans%20KR%27%2Csans-serif%22%20font-weight%3D%22700%22%3E%EA%B9%80%3C/text%3E%3C/svg%3E",
-    "name": "김영광",
-    "role": "메인 강사 · 공학박사 (소재 분야)"
+    "img": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%230076f9%22%20width%3D%22200%22%20height%3D%22200%22/%3E%3Ctext%20x%3D%22100%22%20y%3D%22125%22%20font-size%3D%2272%22%20text-anchor%3D%22middle%22%20fill%3D%22%23ffffff%22%20font-family%3D%22%27Pretendard%27%2Csans-serif%22%20font-weight%3D%22700%22%3ELead%3C/text%3E%3C/svg%3E",
+    "name": "메인 강사",
+    "role": "포항공대 박사"
   },
   "team2": {
-    "img": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%231a3252%22%20width%3D%22200%22%20height%3D%22200%22/%3E%3Ctext%20x%3D%22100%22%20y%3D%22130%22%20font-size%3D%22100%22%20text-anchor%3D%22middle%22%20fill%3D%22%23ffffff%22%20font-family%3D%22%27Pretendard%27%2C%27Noto%20Sans%20KR%27%2Csans-serif%22%20font-weight%3D%22700%22%3E%EC%9D%B4%3C/text%3E%3C/svg%3E",
+    "img": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%231a3252%22%20width%3D%22200%22%20height%3D%22200%22/%3E%3Ctext%20x%3D%22100%22%20y%3D%22125%22%20font-size%3D%2272%22%20text-anchor%3D%22middle%22%20fill%3D%22%23ffffff%22%20font-family%3D%22%27Pretendard%27%2Csans-serif%22%20font-weight%3D%22700%22%3ECEO%3C/text%3E%3C/svg%3E",
     "name": "이재웅",
     "role": "대표 · 교육 패러다임 전문가"
   },
   "team3": {
-    "img": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%233b82f6%22%20width%3D%22200%22%20height%3D%22200%22/%3E%3Ctext%20x%3D%22100%22%20y%3D%22130%22%20font-size%3D%22100%22%20text-anchor%3D%22middle%22%20fill%3D%22%23ffffff%22%20font-family%3D%22%27Pretendard%27%2C%27Noto%20Sans%20KR%27%2Csans-serif%22%20font-weight%3D%22700%22%3E%EA%B9%80%3C/text%3E%3C/svg%3E",
+    "img": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%233b82f6%22%20width%3D%22200%22%20height%3D%22200%22/%3E%3Ctext%20x%3D%22100%22%20y%3D%22125%22%20font-size%3D%2272%22%20text-anchor%3D%22middle%22%20fill%3D%22%23ffffff%22%20font-family%3D%22%27Pretendard%27%2Csans-serif%22%20font-weight%3D%22700%22%3EDev%3C/text%3E%3C/svg%3E",
     "name": "김유일",
     "role": "현직 AI 개발자 · 산업계"
   },
   "team4": {
-    "img": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%230076f9%22%20width%3D%22200%22%20height%3D%22200%22/%3E%3Ctext%20x%3D%22100%22%20y%3D%22130%22%20font-size%3D%22100%22%20text-anchor%3D%22middle%22%20fill%3D%22%23ffffff%22%20font-family%3D%22%27Pretendard%27%2C%27Noto%20Sans%20KR%27%2Csans-serif%22%20font-weight%3D%22700%22%3EAI%3C/text%3E%3C/svg%3E",
+    "img": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%230076f9%22%20width%3D%22200%22%20height%3D%22200%22/%3E%3Ctext%20x%3D%22100%22%20y%3D%22125%22%20font-size%3D%2272%22%20text-anchor%3D%22middle%22%20fill%3D%22%23ffffff%22%20font-family%3D%22%27Pretendard%27%2Csans-serif%22%20font-weight%3D%22700%22%3EAI%3C/text%3E%3C/svg%3E",
     "name": "한국AI미래연구회",
     "role": "학계 · 산업계 · R&D 연합"
-  },
-  "main": {
-    "title": "메인 강사 · 김영광 — 공학박사 (소재 분야)",
-    "text": "포항공과대학교(POSTECH) 신소재공학과 박사 · 고려대 · 동국대 · 성균관대 · 순천대 · 동아대 등 다수 대학 교육 · 한국자동차연구원 · 한국재료연구원 등 공공기관 교육 · 현) (주)버추얼랩 이사 · 현) 대한금속재료학회 인공지능 분과 소속 · 상위 5% 이내 SCI 논문 다수 발표 · 정부 R&D 다수 참여"
   },
   "contact": {
     "title": "Contact us · 기대효과 및 협력 문의",

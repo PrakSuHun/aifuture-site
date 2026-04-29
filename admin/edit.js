@@ -31,7 +31,6 @@ const LABELS = {
 	'scope.title':'Scope 섹션 제목',
 	'curriculum.title':'Curriculum 섹션 제목',
 	'team.title':'Speakers 섹션 제목',
-	'main.title':'메인 강사 상세 제목','main.text':'메인 강사 경력',
 	'contact.title':'Contact 섹션 제목','contact.formTitle':'문의 폼 제목',
 	'contact.phName':'폼 — 이름 placeholder','contact.phEmail':'폼 — 이메일 placeholder','contact.phMessage':'폼 — 메시지 placeholder','contact.submit':'폼 — 제출 버튼',
 	'contact.infoTitle':'직접 연락처 제목','contact.email':'이메일 (표시)','contact.emailLink':'이메일 링크','contact.phone':'전화번호','contact.location':'위치/소속',

@@ -376,13 +376,6 @@ collections:
               - { label: '이름', name: name, widget: string }
               - { label: '직함', name: role, widget: string }
 
-          - label: '🎤 Speakers — 메인 강사 상세'
-            name: main
-            widget: object
-            collapsed: true
-            fields:
-              - { label: '제목', name: title, widget: string }
-              - { label: '경력 본문', name: text, widget: text }
 
           # ── Contact ──
           - label: '📞 Contact'
