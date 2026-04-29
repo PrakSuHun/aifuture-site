@@ -9,7 +9,7 @@
     "contact": "Contact"
   },
   "hero": {
-    "bg": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1920&q=80&auto=format&fit=crop"
+    "bg": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1920&h=600&fit=crop&q=80&auto=format"
   },
   "slide1": {
     "h1pre": "Welcome to",
@@ -46,7 +46,7 @@
   },
   "whoweare": {
     "title": "Who we are",
-    "img": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop&q=80&auto=format",
     "text": "한국AI미래연구회는 인공지능의 급격한 발전이 만들어내는 산업·교육·노동의 구조적 변화를 분석하고, 미래 세대가 AI와 공존하며 자신만의 가치를 발휘할 수 있도록 지원하는 전문가 모임입니다. 단순한 '기술 사용자'를 넘어, AI를 활용한 문제 해결자(Problem Solver)로 학생들이 성장할 수 있도록 지원합니다. AI는 더 이상 먼 미래의 기술이 아닙니다. 현장의 구조는 빠르게 변화하고 있으며, 지금 이 순간에도 학생들의 진로와 직업 환경이 빠르게 재편되고 있습니다."
   },
   "mission": {
@@ -65,42 +65,42 @@
     "title": "Scope · 활동 영역과 구성원"
   },
   "blog1": {
-    "img": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop&q=80&auto=format",
     "title": "AI 시대 인재상 · 교육 패러다임 연구",
     "text": "AI 시대를 살아갈 미래 인재가 갖춰야 할 4대 핵심 역량 — 비판적 사고, 메타인지, 협업, AI 리터러시 — 를 정의하고 교육 현장에 확산합니다.",
     "tag1": "연구분야",
     "tag2": "Research"
   },
   "blog2": {
-    "img": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop&q=80&auto=format",
     "title": "산업 현장의 AI 워크플로우 사례 분석",
     "text": "현직 AI 개발자와 함께 산업 현장에서 실제로 사용되는 AI 도구와 자동화 시스템, 활용 사례를 분석하여 학습 로드맵으로 정리합니다.",
     "tag1": "연구분야",
     "tag2": "Research"
   },
   "blog3": {
-    "img": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=900&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop&q=80&auto=format",
     "title": "R&D 현장의 AI 활용 연구",
     "text": "소재 분야를 비롯한 R&D 현장에서의 AI 도입·활용 사례를 분석하고, AI가 가능한 영역과 인간만의 가치 영역의 경계를 연구합니다.",
     "tag1": "연구분야",
     "tag2": "Research"
   },
   "blog4": {
-    "img": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop&q=80&auto=format",
     "title": "대학 · 공공기관 · 기업 대상 특강",
     "text": "대학 재학생부터 공공기관 종사자, 기업 임직원까지 폭넓은 대상을 위한 맞춤형 특강을 진행합니다. 오프라인 · 온라인 · 하이브리드 모두 가능합니다.",
     "tag1": "주요활동",
     "tag2": "Lecture"
   },
   "blog5": {
-    "img": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=900&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=400&fit=crop&q=80&auto=format",
     "title": "AI 인재 · 교육 관련 연구 보고서 발간",
     "text": "현장에 뿌리내린 연구를 바탕으로 AI 시대 인재상과 교육 패러다임에 관한 연구 보고서를 발간하여 사회적 공감대를 형성합니다.",
     "tag1": "주요활동",
     "tag2": "Report"
   },
   "blog6": {
-    "img": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=900&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=400&fit=crop&q=80&auto=format",
     "title": "산학협력 네트워킹 · 후속 프로그램",
     "text": "특강 이후 워크숍 · 캠프 · 멘토링 등 후속 프로그램을 통해 학생과 산업·연구 현장을 잇는 산학협력 네트워크를 확장합니다.",
     "tag1": "주요활동",
@@ -117,47 +117,47 @@
     "overview": "개요"
   },
   "p1": {
-    "img": "https://images.unsplash.com/photo-1501139083538-0139583c060f?w=900&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1501139083538-0139583c060f?w=600&h=450&fit=crop&q=80&auto=format",
     "title": "총 60분 · 3개 트랙",
     "sub": "이론 → 실전 → 현장 흐름으로 구성"
   },
   "p2": {
-    "img": "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=900&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&h=450&fit=crop&q=80&auto=format",
     "title": "참여 인원 30명",
     "sub": "대학 재학생 (전공 무관)"
   },
   "p3": {
-    "img": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=900&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&h=450&fit=crop&q=80&auto=format",
     "title": "오프라인 강연 중심",
     "sub": "온라인 · 하이브리드 협의 가능"
   },
   "p4": {
-    "img": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=450&fit=crop&q=80&auto=format",
     "title": "WHY · 이론 (10분)",
     "sub": "AI 시대의 교육과 패러다임"
   },
   "p5": {
-    "img": "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=900&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=600&h=450&fit=crop&q=80&auto=format",
     "title": "4대 핵심 역량",
     "sub": "비판적 사고 · 메타인지 · 협업 · AI 리터러시"
   },
   "p6": {
-    "img": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=450&fit=crop&q=80&auto=format",
     "title": "HOW · 실전 (20분)",
     "sub": "현직 개발자가 알려주는 실전 AI 활용 기술"
   },
   "p7": {
-    "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=450&fit=crop&q=80&auto=format",
     "title": "나만의 자동화 시스템",
     "sub": "아이디어 발굴부터 결과물까지"
   },
   "p8": {
-    "img": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=450&fit=crop&q=80&auto=format",
     "title": "WHAT · 현장 (30분)",
     "sub": "공학박사가 말하는 AI 시대 R&D 현실과 인재상"
   },
   "p9": {
-    "img": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=450&fit=crop&q=80&auto=format",
     "title": "Q&A · 진로 멘토링",
     "sub": "현직자 · 연구자와의 직접 소통"
   },
@@ -165,22 +165,22 @@
     "title": "Speakers · 강사진 소개"
   },
   "team1": {
-    "img": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=faces&q=80&auto=format",
     "name": "김영광",
     "role": "메인 강사 · 공학박사 (소재 분야)"
   },
   "team2": {
-    "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=faces&q=80&auto=format",
     "name": "이재웅",
     "role": "대표 · 교육 패러다임 전문가"
   },
   "team3": {
-    "img": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=faces&q=80&auto=format",
     "name": "김유일",
     "role": "현직 AI 개발자 · 산업계"
   },
   "team4": {
-    "img": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80&auto=format&fit=crop",
+    "img": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=400&fit=crop&crop=faces&q=80&auto=format",
     "name": "한국AI미래연구회",
     "role": "학계 · 산업계 · R&D 연합"
   },
