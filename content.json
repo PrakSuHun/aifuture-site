@@ -52,7 +52,7 @@
   "mission": {
     "title": "Our Mission",
     "entry1": "핵심 역량 정의·확산 <span>100%</span>",
-    "entry2": "산업 ↔ 교육 가교 역할 <span>100%</span>",
+    "entry2": "산업·교육 가교 역할 <span>100%</span>",
     "entry3": "사람 중심 AI 공존 모델 <span>100%</span>",
     "entry4": "비판적 사고 · 메타인지 <span>95%</span>",
     "entry5": "협업 · AI 리터러시 <span>95%</span>"
@@ -119,7 +119,7 @@
   "p1": {
     "img": "https://images.unsplash.com/photo-1501139083538-0139583c060f?w=600&h=450&fit=crop&q=80&auto=format",
     "title": "총 60분 · 3개 트랙",
-    "sub": "이론 → 실전 → 현장 흐름으로 구성"
+    "sub": "이론 · 실전 · 현장 흐름으로 구성"
   },
   "p2": {
     "img": "uploads/1777453246033-20260429_085914_5efb759e.png",
