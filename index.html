@@ -32,6 +32,23 @@
 			margin: 0 0 18px 0;
 			border-radius: 4px;
 		}
+		/* orbit7 CSS 가 input[type=text] 만 스타일링하므로 email 도 동일하게 적용 */
+		#contact-form input[type="email"]{
+			color: #737373;
+			font-size: 13px;
+			font-family: 'Open Sans', sans-serif;
+			border: 1px solid #e6e6e6;
+			border-radius: 0;
+			outline: none;
+			width: 100%;
+			padding: 14px 14px 14px 40px;
+			margin-bottom: 14px;
+			background: #fff;
+			box-sizing: border-box;
+		}
+		#contact-form input[type="email"]:focus{
+			border-color: #0076f9;
+		}
 	</style>
 
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
@@ -499,7 +516,7 @@
 										</div>
 
 										<div class="float-input2">
-											<input name="mail" id="mail" type="email" placeholder="이메일" required data-edit-attr="contact.phEmail" data-edit-attr-name="placeholder">
+											<input name="mail" id="mail" type="email" inputmode="email" placeholder="이메일" required data-edit-attr="contact.phEmail" data-edit-attr-name="placeholder">
 											<span><i class="fa fa-envelope"></i></span>
 										</div>
 									</div>
