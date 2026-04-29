@@ -33,8 +33,34 @@
 		.news-item img{ margin-bottom: 0 !important; }
 		.news-item h2{ color: #15151a !important; font-weight: 700 !important; font-size: 17px !important; line-height: 1.4 !important; padding: 16px 18px 6px; margin-bottom: 0 !important; }
 		.news-item p{ color: #5a5a66 !important; padding: 0 18px 4px; line-height: 1.65 !important; }
-		.work-post{ border: 1px solid #ececef; box-shadow: 0 2px 6px rgba(0,0,0,.04); background: #fff; }
-		.work-post-content{ padding: 16px 14px !important; }
+		.work-post{ border: 1px solid #ececef; box-shadow: 0 2px 6px rgba(0,0,0,.04); background: #fff; margin-bottom: 28px; }
+			/* ★ 그리드 정렬 — 다양한 종횡비 이미지가 카드 높이 통일을 깨뜨리는 것 방지
+			   원인: Bootstrap float:left 그리드는 이전 행의 키 큰 카드가 다음 행을 막음
+			   해법: 이미지 박스 종횡비 고정 + object-fit:cover 로 잘라서 표시 */
+			.work-post-gal{
+				width: 100%;
+				aspect-ratio: 4 / 3;
+				overflow: hidden;
+				background: #f5f6f8;
+			}
+			.work-post-gal img{
+				width: 100% !important;
+				height: 100% !important;
+				object-fit: cover;
+				display: block;
+			}
+			/* Scope 블로그 카드 — 같은 종횡비 이슈 방지 */
+			.news-item img{
+				aspect-ratio: 3 / 2;
+				width: 100% !important;
+				height: auto !important;
+				object-fit: cover;
+				display: block;
+			}
+			/* 매 3번째 col-md-4 부터 줄바꿈 강제 (높이 차이로 떠밀리는 것 방지) */
+			#portfolio-section .col-md-4:nth-child(3n+1){ clear: left; }
+			#blog-section .col-md-4:nth-child(3n+1){ clear: left; }
+			.work-post-content{ padding: 16px 14px !important; }
 		.work-post-content h2{ color: #15151a !important; font-weight: 700 !important; font-size: 16px !important; line-height: 1.4 !important; margin-bottom: 6px !important; }
 		.work-post-content span{ color: #5a5a66 !important; font-size: 13px !important; line-height: 1.5 !important; }
 		/* Speakers 카드 — vendor의 검은 반투명 배경(#000 0.5) 위 텍스트가 검정 가독성 X
