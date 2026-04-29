@@ -22,6 +22,16 @@
 		body, h1, h2, h3, h4, h5, h6, p, a, li, span, div, input, textarea {
 			font-family: 'Pretendard', 'Open Sans', sans-serif;
 		}
+		/* whoweare 이미지가 컬럼 침범 방지 — orbit7 .about-us-text img 의 누락된 width 보완 */
+		.about-us-text .innner-box img {
+			float: none !important;
+			display: block;
+			width: 100%;
+			height: auto;
+			max-width: 100%;
+			margin: 0 0 18px 0;
+			border-radius: 4px;
+		}
 	</style>
 
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
@@ -111,16 +121,9 @@
 			<div class="navbar navbar-default navbar-fixed-top">
 				<div class="container">
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
 						<a class="navbar-brand"><img alt="한국AI미래연구회" src="assets/images/logo.png" data-edit-img="nav.logo"></a>
 					</div>
-					<!-- 상단 메뉴 제거됨 (클릭 네비게이션 비활성화) -->
-					<div class="navbar-collapse collapse"></div>
-				</div>
+					</div>
 			</div>
 		</header>
 
@@ -174,7 +177,7 @@
 
 							<div class="col-md-4">
 								<div class="services-post">
-									<a class="services-icon2"><i class="fa fa-share-alt"></i></a>
+									<a class="services-icon2"><i class="fa fa-share"></i></a>
 									<div class="services-post-content">
 										<h4 data-edit-text="service2.title">활동 영역</h4>
 										<p data-edit-text="service2.text">대학 · 공공기관 · 기업 대상 특강과 AI 인재·교육 관련 연구 보고서 발간, 씽크탱크 활동, 산학협력 네트워킹을 폭넓게 진행합니다.</p>
@@ -184,7 +187,7 @@
 
 							<div class="col-md-4">
 								<div class="services-post">
-									<a class="services-icon3"><i class="fa fa-handshake-o"></i></a>
+									<a class="services-icon3"><i class="fa fa-lightbulb-o"></i></a>
 									<div class="services-post-content">
 										<h4 data-edit-text="service3.title">철학</h4>
 										<p data-edit-text="service3.text">기술 중심이 아닌, 사람 중심의 AI 공존 모델을 지향합니다. 단순한 기술 사용자를 넘어 AI를 활용한 문제 해결자로 성장하도록 지원합니다.</p>
@@ -405,12 +408,7 @@
 				<div class="container">
 					<div class="work-staff">
 						<h3 data-edit-text="team.title">Speakers · 강사진 소개</h3>
-						<div id="carousel-example-generic1" class="carousel slide" data-ride="carousel">
-
-							<div class="carousel-inner">
-
-								<div class="item active">
-									<div class="row">
+						<div class="row">
 
 										<div class="col-md-3">
 											<div class="staff-post">
@@ -457,10 +455,6 @@
 													<h5 data-edit-text="team4.name">한국AI미래연구회</h5>
 													<span data-edit-text="team4.role">학계 · 산업계 · R&amp;D 연합</span>
 </div>
-											</div>
-										</div>
-
-									</div>
 								</div>
 
 							</div>
@@ -494,9 +488,9 @@
 					<div class="container">
 						<div class="row">
 
-							<div class="col-md-6">
+							<div class="col-md-12">
 								<h3 data-edit-text="contact.formTitle">문의 메시지 보내기</h3>
-								<form id="contact-form" class="contact-work-form2" onsubmit="return sendContactMail(event)">
+								<form id="contact-form" class="contact-work-form2" action="mailto:swampu@naver.com" method="post" enctype="text/plain" onsubmit="return sendContactMail(event)">
 
 									<div class="text-input">
 										<div class="float-input">
@@ -574,11 +568,9 @@
 				<div class="container">
 					<div class="footer-line-in">
 						<div class="row">
-							<div class="col-md-8">
+							<div class="col-md-12" style="text-align:center">
 								<p data-edit-text="footer.copyright">&#169; 2026 한국AI미래연구회 · KOREA AI FUTURE RESEARCH SOCIETY</p>
 							</div>
-							<div class="col-md-4">
-</div>
 						</div>
 					</div>
 				</div>
