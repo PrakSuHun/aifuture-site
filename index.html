@@ -21,7 +21,39 @@
 	<style>
 		body, h1, h2, h3, h4, h5, h6, p, a, li, span, div, input, textarea {
 			font-family: 'Pretendard', 'Open Sans', sans-serif;
+			-webkit-font-smoothing: antialiased;
 		}
+		/* 한글 가독성 — vendor의 font-weight:300/color:#9a9a9a 가 너무 얇고 흐림 */
+		body{ background: #fff; }
+		p{ color: #6e6e7a; font-weight: 400; line-height: 1.7; }
+		h1, h3, h4, h5{ font-weight: 600 !important; }
+		.services-post-content h4{ color: #1a1a1a; font-weight: 700 !important; font-size: 18px; }
+		.services-post-content p{ color: #6e6e7a; }
+		.news-item h2{ color: #1a1a1a; font-weight: 700; font-size: 17px; line-height: 1.4; }
+		.news-item p{ color: #6e6e7a; }
+		.work-post-content h2{ color: #1a1a1a; font-weight: 700; font-size: 16px; }
+		.work-post-content span{ color: #6e6e7a; font-size: 13px; line-height: 1.5; }
+		.staff-post-content h5{ color: #1a1a1a; font-weight: 700; font-size: 16px; }
+		.staff-post-content span{ color: #6e6e7a; font-size: 13px; }
+		.about-us-text p, .company-mission p{ color: #404049; }
+		.skills-progress p{ color: #404049; font-weight: 500; }
+		.contact-information-list li{ color: #404049; }
+		footer p{ color: #6e6e7a; }
+		/* h3 섹션 제목 톤 보강 */
+		h3{ color: #15151a !important; font-weight: 700 !important; }
+		/* About 6각형 카드 — 가운데 정렬로 통일감 (vendor는 left-align) */
+		.services-box .services-post{ text-align: center; }
+		.services-box .services-post > a{ display: inline-block; }
+		.services-box .services-post-content{ padding-top: 14px; }
+
+		/* Speakers 카드 — 가운데 정렬 */
+		.staff-post{ text-align: center; }
+
+		/* Hero: vendor CSS에 home-box 높이가 없어 무너짐 → 데스크탑 기준 700px 잡기.
+		   background-view는 position:absolute + width:1920px이라 부모 높이가 없으면 caption이 무너진다. */
+		.home-box{ height: 700px; }
+		.home-box .background-view{ height: 100%; object-fit: cover; }
+
 		/* whoweare 이미지가 컬럼 침범 방지 — orbit7 .about-us-text img 의 누락된 width 보완 */
 		.about-us-text .innner-box img {
 			float: none !important;
