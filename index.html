@@ -603,29 +603,57 @@
 
 							<div class="col-md-6">
 								<h3 data-edit-text="contact.formTitle">문의 메시지 보내기</h3>
-								<form id="contact-form" class="contact-work-form2">
+								<form id="contact-form" class="contact-work-form2" onsubmit="return sendContactMail(event)">
 
 									<div class="text-input">
 										<div class="float-input">
-											<input name="name" id="name" type="text" placeholder="기관·이름" data-edit-attr="contact.phName" data-edit-attr-name="placeholder">
+											<input name="name" id="name" type="text" placeholder="기관·이름" required data-edit-attr="contact.phName" data-edit-attr-name="placeholder">
 											<span><i class="fa fa-user"></i></span>
 										</div>
 
 										<div class="float-input2">
-											<input name="mail" id="mail" type="text" placeholder="이메일" data-edit-attr="contact.phEmail" data-edit-attr-name="placeholder">
+											<input name="mail" id="mail" type="email" placeholder="이메일" required data-edit-attr="contact.phEmail" data-edit-attr-name="placeholder">
 											<span><i class="fa fa-envelope"></i></span>
 										</div>
 									</div>
 
 									<div class="textarea-input">
-										<textarea name="comment" id="comment" placeholder="문의 내용 (일정·장소·인원·예산 등)" data-edit-attr="contact.phMessage" data-edit-attr-name="placeholder"></textarea>
+										<textarea name="comment" id="comment" placeholder="문의 내용 (일정·장소·인원·예산 등)" required data-edit-attr="contact.phMessage" data-edit-attr-name="placeholder"></textarea>
 										<span><i class="fa fa-comment"></i></span>
 									</div>
 
-									<div class="msg message"></div>
+									<div class="msg message" id="contact-msg" style="font-size:13px;color:#7f8da6;margin:8px 0;"></div>
 									<input type="submit" id="submit_contact" value="메시지 보내기" data-edit-attr="contact.submit" data-edit-attr-name="value">
 
 								</form>
+
+								<script>
+								function sendContactMail(e){
+									e.preventDefault();
+									if (document.documentElement.classList.contains('edit-mode')) return false;
+									var name = (document.getElementById('name').value||'').trim();
+									var mail = (document.getElementById('mail').value||'').trim();
+									var msg  = (document.getElementById('comment').value||'').trim();
+									if (!name || !mail || !msg){
+										document.getElementById('contact-msg').innerHTML = '<span style="color:#e84a4a">⚠ 모든 항목을 입력해 주세요.</span>';
+										return false;
+									}
+									var to = (window.__siteContent && window.__siteContent.contact && window.__siteContent.contact.email) || 'swampu@naver.com';
+									var subject = encodeURIComponent('[한국AI미래연구회 홈페이지 문의] ' + name);
+									var body = encodeURIComponent(
+										'보낸 사람: ' + name + '\n' +
+										'회신 이메일: ' + mail + '\n\n' +
+										'─────────────────────\n' +
+										msg + '\n' +
+										'─────────────────────\n\n' +
+										'(이 메시지는 한국AI미래연구회 홈페이지 문의 폼에서 전송되었습니다.)'
+									);
+									window.location.href = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
+									document.getElementById('contact-msg').innerHTML =
+										'<span style="color:#0076f9">✓ 메일 앱이 열렸습니다. 자동으로 안 열린다면 <a href="mailto:' + to + '">여기를 클릭</a>해 주세요.</span>';
+									return false;
+								}
+								</script>
 							</div>
 
 						</div>
