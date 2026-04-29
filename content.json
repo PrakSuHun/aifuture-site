@@ -46,7 +46,7 @@
   },
   "whoweare": {
     "title": "Who we are",
-    "img": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop&q=80&auto=format",
+    "img": "uploads/1777450017512-chatgpt-image-2026----4----29---------05_06_46.png",
     "text": "한국AI미래연구회는 인공지능의 급격한 발전이 만들어내는 산업·교육·노동의 구조적 변화를 분석하고, 미래 세대가 AI와 공존하며 자신만의 가치를 발휘할 수 있도록 지원하는 전문가 모임입니다. 단순한 '기술 사용자'를 넘어, AI를 활용한 문제 해결자(Problem Solver)로 학생들이 성장할 수 있도록 지원합니다. AI는 더 이상 먼 미래의 기술이 아닙니다. 현장의 구조는 빠르게 변화하고 있으며, 지금 이 순간에도 학생들의 진로와 직업 환경이 빠르게 재편되고 있습니다."
   },
   "mission": {
@@ -65,14 +65,14 @@
     "title": "Scope · 활동 영역과 구성원"
   },
   "blog1": {
-    "img": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop&q=80&auto=format",
+    "img": "uploads/1777449914012-chatgpt-image-2026----4----29---------04_51_43.png",
     "title": "AI 시대 인재상 · 교육 패러다임 연구",
     "text": "AI 시대를 살아갈 미래 인재가 갖춰야 할 4대 핵심 역량 — 비판적 사고, 메타인지, 협업, AI 리터러시 — 를 정의하고 교육 현장에 확산합니다.",
     "tag1": "연구분야",
     "tag2": "Research"
   },
   "blog2": {
-    "img": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop&q=80&auto=format",
+    "img": "uploads/1777449886129-chatgpt-image-2026----4----29---------04_53_09.png",
     "title": "산업 현장의 AI 워크플로우 사례 분석",
     "text": "현직 AI 개발자와 함께 산업 현장에서 실제로 사용되는 AI 도구와 자동화 시스템, 활용 사례를 분석하여 학습 로드맵으로 정리합니다.",
     "tag1": "연구분야",
